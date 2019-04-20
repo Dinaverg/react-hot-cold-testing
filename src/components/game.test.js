@@ -1,7 +1,7 @@
 import React from 'react'
 import {shallow, mount} from 'enzyme'
 
-import Game from './Game'
+import Game from './game'
 
 describe('<Game />', () => {
   it('Renders without crashing', () => {

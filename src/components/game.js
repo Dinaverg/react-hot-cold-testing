@@ -6,7 +6,7 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
-import {restart, makeGuess, aFeedback, anAuralStatus} from '../actions';
+import {restart, makeGuess, aFeedback, anAuralStatus} from '../actions/actions';
 
 
 export class Game extends React.Component {
@@ -55,7 +55,7 @@ export class Game extends React.Component {
     // pluralize the nouns in this aural update.
     const pluralize = guesses.length !== 1;
 
-    let  auralStatus = `Here's the status of the game right now: ${feedback} You've made ${guesses.length} ${pluralize ? 'guesses' : 'guess'}.`;
+    let auralStatus = `Here's the status of the game right now: ${feedback} You've made ${guesses.length} ${pluralize ? 'guesses' : 'guess'}.`;
 
     if (guesses.length > 0) {
       auralStatus += ` ${pluralize ? 'In order of most- to least-recent, they are' : 'It was'}: ${guesses.reverse().join(', ')}`;
